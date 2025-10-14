@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MORA｜AI 驅動的行銷人才資產化平台</title>
+    <meta
+      name="description"
+      content="MORA 以 AI 引擎精準媒合企業與頂尖創意行銷人才，提供雙邊打造服務方案、案件管理與成效追蹤的一站式平台。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header__content">
+        <div class="header__brand">
+          <span class="brand__mark">MORA</span>
+          <span class="brand__tagline">行銷人才資產化平台</span>
+        </div>
+        <nav class="header__nav" aria-label="主選單">
+          <a href="#demos">產品影片</a>
+          <a href="#features">產品特色</a>
+          <a href="#workflows">媒合流程</a>
+          <a href="#faq">常見問題</a>
+        </nav>
+        <a href="#lead-form" class="button button--ghost">預約 Demo</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__content">
+          <div class="hero__text">
+            <p class="eyebrow">AI 驅動 · 行銷與創意專家媒合</p>
+            <h1>
+              有才華的你可快速的找到
+              讓企業 <span>7 天內</span> 找到最適合的行銷專家，<br />
+              也讓自由人才擁有穩定案源與 AI 成長教練。
+            </h1>
+            <p class="lead">
+              MORA 整合 AI 人才配對、雙邊 onboarding、案源視覺化管理與定價教練，
+              帶來透明、可信賴的合作體驗。
+            </p>
+            <ul class="hero__bullets">
+              <li>Gemini 驅動的專案需求解析與人才推薦</li>
+              <li>人才 AI Onboarding 一鍵生成 3 層服務方案</li>
+              <li>企業看板追蹤招募、執行與完成進度</li>
+            </ul>
+            <div class="hero__cta">
+              <a href="#lead-form" class="button button--primary">加入等候名單</a>
+              <span class="caption">開放首批 50 家企業、100 位人才申請</span>
+            </div>
+            <div class="hero__stats">
+              <div>
+                <span class="stat__value">3,000+</span>
+                <span class="stat__label">專案需求配對</span>
+              </div>
+              <div>
+                <span class="stat__value">92%</span>
+                <span class="stat__label">合作滿意度</span>
+              </div>
+              <div>
+                <span class="stat__value">1.8 倍</span>
+                <span class="stat__label">人才平均收入成長</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__form-block" id="lead-form">
+            <div class="form-card">
+              <h2>預約 Demo / 申請加入</h2>
+              <p>留下資訊，我們會在 24 小時內與您聯繫，安排專屬顧問諮詢。</p>
+              <form class="lead-form" novalidate>
+                <label>
+                  <span>姓名</span>
+                  <input type="text" name="name" placeholder="請輸入您的姓名" required />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" placeholder="name@company.com" required />
+                </label>
+                <label>
+                  <span>公司 / 品牌名稱</span>
+                  <input type="text" name="company" placeholder="例如：Bright Studio" required />
+                </label>
+                <label>
+                  <span>角色</span>
+                  <select name="role" required>
+                    <option value="">請選擇</option>
+                    <option value="business">企業端：正在找人才</option>
+                    <option value="talent">人才端：正在找案源</option>
+                    <option value="partner">合作夥伴 / 其他</option>
+                  </select>
+                </label>
+                <label>
+                  <span>目前挑戰</span>
+                  <textarea
+                    name="message"
+                    rows="3"
+                    placeholder="告訴我們您的專案目標或人才需求"
+                    required
+                  ></textarea>
+                </label>
+                <button type="submit" class="button button--primary button--full">
+                  送出需求
+                </button>
+                <p class="form__hint">提交後將收到確認信與 Demo 報名連結。</p>
+                <p class="form__success" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="hero__logos">
+
+      </section>
+
+      <section class="demos" id="demos">
+        <div class="container section__header">
+          <p class="eyebrow">產品影片</p>
+          <h2>親眼看看 MORA 如何放大雙邊價值</h2>
+          <p class="section__lead">
+            透過這三段操作影片，快速了解 AI 定價教練、企業媒合流程以及專案管理儀表板的實際樣貌。
+          </p>
+        </div>
+        <div class="container demo-grid">
+          <article class="demo-card">
+            <div class="demo-card__media">
+              <video
+                controls
+                preload="none"
+                poster="https://picsum.photos/seed/mora-pricing/960/540"
+                playsinline
+              >
+                <source src="https://storage.googleapis.com/coverr-main/mp4/Footboys.mp4" type="video/mp4" />
+                您的瀏覽器不支援影片播放，建議改用 Chrome 或 Safari。
+              </video>
+            </div>
+            <div class="demo-card__info">
+              <h3>人才 AI 定價教練</h3>
+              <p>
+                只要輸入專長與收入目標，AI 立即推薦三層服務方案與交付內容，還能帶出 FAQ 與提案話術，縮短上架服務的時間。
+              </p>
+              <ul>
+                <li>自動計算市場區間與建議售價</li>
+                <li>生成服務模板，可直接發布或微調</li>
+                <li>同步寫入個人後台，維持品牌一致性</li>
+              </ul>
+            </div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-card__media">
+              <video
+                controls
+                preload="none"
+                poster="https://picsum.photos/seed/mora-matching/960/540"
+                playsinline
+              >
+                <source src="https://storage.googleapis.com/coverr-main/mp4/Waves.mp4" type="video/mp4" />
+                您的瀏覽器不支援影片播放，建議改用 Chrome 或 Safari。
+              </video>
+            </div>
+            <div class="demo-card__info">
+              <h3>企業 AI 人才媒合</h3>
+              <p>
+                企業提交專案描述與預算後，Gemini 解析需求重點與合作模式，產出三位最佳候選人才並提供顧問複核意見。
+              </p>
+              <ul>
+                <li>語意分析找出關鍵技能、產業、檔期</li>
+                <li>顧問可在系統內補充備註與推薦理由</li>
+                <li>支援收藏、邀約與比較，決策更快速</li>
+              </ul>
+            </div>
+          </article>
+          <article class="demo-card">
+            <div class="demo-card__media">
+              <video
+                controls
+                preload="none"
+                poster="https://picsum.photos/seed/mora-dashboard/960/540"
+                playsinline
+              >
+                <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4" />
+                您的瀏覽器不支援影片播放，建議改用 Chrome 或 Safari。
+              </video>
+            </div>
+            <div class="demo-card__info">
+              <h3>專案管理儀表板</h3>
+              <p>
+                從招募、執行到完成，案件狀態一目了然。支援提醒、會議紀錄、成果上傳與 KPI 追蹤，確保雙方資訊透明。
+              </p>
+              <ul>
+                <li>拖拉卡片調整階段，進度即時同步</li>
+                <li>整合時程、交付物與預算消耗</li>
+                <li>成效報表提供續約與結案依據</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature-overview" id="features">
+        <div class="container section__header">
+          <p class="eyebrow">核心價值</p>
+          <h2>比傳統人力仲介更快、更透明、更可信賴</h2>
+          <p class="section__lead">
+            MORA 將行銷傳播產業的專案脈絡轉換成 AI 可讀的資料模型，透過自動化評估與雙邊工具，
+            讓企業與人才專心在策略與創意，而非耗時的溝通與協調。
+          </p>
+        </div>
+        <div class="container feature-grid">
+          <article class="feature-card">
+            <h3>AI 專案解析與精準媒合</h3>
+            <p>
+              結合 Gemini 解析專案需求與預算，對照人才庫技術標籤、定價與履歷，從數百位人才中即時推薦 Top 3
+              候選人，平均縮短 70% 篩選時間。
+            </p>
+            <ul>
+              <li>語意理解專案重點與預算範圍</li>
+              <li>自動比對技能矩陣與可用檔期</li>
+              <li>可一鍵邀請或收藏人才清單</li>
+            </ul>
+          </article>
+          <article class="feature-card">
+            <h3>雙邊 AI Onboarding</h3>
+            <p>
+              人才可輸入擅長領域與收入目標，AI 立即生成三層服務方案；企業則可透過提示生成公司簡介與專案描述，
+              建立專業檔案只需 10 分鐘。
+            </p>
+            <ul>
+              <li>AI 產生服務分層、交付項目與 FAQ</li>
+              <li>企業簡介自動草擬，保持品牌一致性</li>
+              <li>流程包含基礎驗證，提升合作安全性</li>
+            </ul>
+          </article>
+          <article class="feature-card">
+            <h3>一站式後台與看板追蹤</h3>
+            <p>
+              人才可管理作品集、定價與合作紀錄；企業可在看板追蹤招募、執行與完成狀態，內建成效報表與提醒，
+              確保每個案子都有序推進。
+            </p>
+            <ul>
+              <li>成效儀表板與收入追蹤</li>
+              <li>看板視覺化專案進程</li>
+              <li>通知中心同步雙方最新動態</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="persona">
+        <div class="container persona__inner">
+          <div class="persona__block">
+            <p class="eyebrow">企業端體驗</p>
+            <h2>替成長團隊打造的交付流程</h2>
+            <p>
+              適合行銷主管、品牌創辦人與新創營運團隊。讓你快速定義需求、比對市場行情並掌握人才合作進度。
+            </p>
+            <div class="persona__list">
+              <div>
+                <h3>AI 商務需求顧問</h3>
+                <p>輸入目標與預算，AI 產出可落地的需求摘要、專案假設與建議 KPI。</p>
+              </div>
+              <div>
+                <h3>招募到交付的一致透明</h3>
+                <p>從邀約面談、合約範本到成效報表都在同一個平台完成。</p>
+              </div>
+              <div>
+                <h3>多專案同步視覺化</h3>
+                <p>企業後台內建案件看板，支援招募 / 執行 / 完成三階段管理。</p>
+              </div>
+            </div>
+          </div>
+          <div class="persona__block">
+            <p class="eyebrow">人才端體驗</p>
+            <h2>讓自由工作者擁有專屬營運中台</h2>
+            <p>
+              適合品牌行銷、社群經營、影像製作與設計等創意專家。AI
+              幫你包辦定價策略、服務分層與商務文案。
+            </p>
+            <div class="persona__list">
+              <div>
+                <h3>AI 定價教練</h3>
+                <p>依據技能、收入目標與市場行情，自動生成三層服務方案。</p>
+              </div>
+              <div>
+                <h3>一鍵更新作品與服務</h3>
+                <p>整合作品集、客戶評價與熱門關鍵字，提升媒合曝光度。</p>
+              </div>
+              <div>
+                <h3>案源市場即時通知</h3>
+                <p>依技能、預算、工作型態等條件訂閱個人化案源提醒。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow" id="workflows">
+        <div class="container section__header">
+          <p class="eyebrow">媒合流程</p>
+          <h2>從需求到合作上線，只需四個步驟</h2>
+          <p class="section__lead">
+            我們將雙方的資訊結構化，再由 AI 提供初步建議，最後交由專屬顧問協助談判與進度掌控。
+          </p>
+        </div>
+        <div class="container workflow__steps">
+          <div class="step-card" data-step="01">
+            <h3>提交需求 / 建立檔案</h3>
+            <p>企業輸入專案描述與預算；人才完成 AI Onboarding 與服務設定。</p>
+          </div>
+          <div class="step-card" data-step="02">
+            <h3>AI 推薦 + 顧問複核</h3>
+            <p>Gemini 引擎產出候選名單，媒合顧問依經驗與案例再次確認。</p>
+          </div>
+          <div class="step-card" data-step="03">
+            <h3>雙邊溝通與合約</h3>
+            <p>系統整合會議邀請、提案稿與合約範本，確保資訊留痕。</p>
+          </div>
+          <div class="step-card" data-step="04">
+            <h3>執行與成效追蹤</h3>
+            <p>後台看板同步進度，並產出成效報表，提供續約與評估依據。</p>
+          </div>
+        </div>
+      </section>
+
+      
+     
+
+      <section class="faq" id="faq">
+        <div class="container section__header">
+          <p class="eyebrow">常見問題</p>
+          <h2>想了解更多？這裡有快速解答</h2>
+        </div>
+        <div class="container faq__list">
+          <details>
+            <summary>加入 MORA 需要費用嗎？</summary>
+            <p>
+              首波企業與人才採邀請制，免年費。成交後平台會依合作金額收取 10% 服務費，已含顧問陪伴與行政支援。
+            </p>
+          </details>
+          <details>
+            <summary>AI 配對需要多長時間？</summary>
+            <p>
+              企業提交需求後，即時會產生初步推薦，顧問會在 24 小時內複核並安排線上討論，平均 7
+              天內完成簽約。
+            </p>
+          </details>
+          <details>
+            <summary>人才資料如何被審核？</summary>
+            <p>
+              完成 AI Onboarding 後，我們會人工審查作品集、過往合作與推薦信，確保媒合品質與專業度。
+            </p>
+          </details>
+          <details>
+            <summary>可以整合我們既有的專案管理工具嗎？</summary>
+            <p>
+              Beta 版支援導出任務列表至 Notion、Asana 與 Google Sheet，正式版將提供 API 與 Webhook。
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container cta__inner">
+          <h2>準備好用 AI 助力創意協作了嗎？</h2>
+          <p>
+            告訴我們您的需求或專長，顧問將為您安排一對一導覽，並提供最適合的啟動方案。
+          </p>
+          <div class="cta__buttons">
+            <a href="#lead-form" class="button button--primary">預約 Demo</a>
+            
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__content">
+        <div>
+          <div class="header__brand">
+            <span class="brand__mark">MORA</span>
+            <span class="brand__tagline">人才媒合平台</span>
+          </div>
+          <p class="caption">
+            專為行銷與創意產業打造的 AI 媒合與協作平台，連接企業與自由人才的理想夥伴。
+          </p>
+        </div>
+        <div class="footer__info">
+
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <span>© <span id="year"></span> MORA Platform. All rights reserved.</span>
+        <a href="#">隱私政策</a>
+      </div>
+    </footer>
+
+    <button class="floating-cta" data-scroll="#lead-form">
+      立即加入等待名單
+    </button>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
