@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const floatingCta = document.querySelector('.floating-cta');
   const yearLabel = document.getElementById('year');
 
+  // ✅ 設定你的 Google Apps Script Web App URL
+  const SCRIPT_URL ='https://script.google.com/macros/s/AKfycbynNILmTYnsKtbRkqHf_9lXvN7DTLpT5QUyXcmUTGYmcLEti4UTb7WeoaYP2CSdhlV4/exec';
+
   if (yearLabel) {
     yearLabel.textContent = new Date().getFullYear();
   }
@@ -19,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   if (leadForm && successField) {
-    leadForm.addEventListener('submit', (event) => {
+    leadForm.addEventListener('submit', async (event) => {
       event.preventDefault();
       const formData = new FormData(leadForm);
 
@@ -32,15 +35,36 @@ document.addEventListener('DOMContentLoaded', () => {
         createdAt: new Date().toISOString(),
       };
 
-      leadForm.reset();
-      successField.textContent = '已收到您的需求，顧問將於 24 小時內與您聯繫。';
+      successField.textContent = '資料送出中，請稍候...';
 
       try {
+        // ✅ 送資料到 Google Apps Script
+        const response = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const result = await response.json();
+
+        if (result.status === 'success') {
+          successField.textContent = '已收到您的需求，顧問將於 24 小時內與您聯繫。';
+          leadForm.reset();
+        } else {
+          successField.textContent = '送出失敗，請稍後再試。';
+        }
+
+        // ✅ 同步存到 localStorage（備份）
         const stored = JSON.parse(localStorage.getItem('mora-leads') ?? '[]');
         stored.push(payload);
         localStorage.setItem('mora-leads', JSON.stringify(stored));
+
       } catch (error) {
-        console.warn('無法儲存至 localStorage', error);
+        console.error('送出表單時發生錯誤：', error);
+        successField.textContent = '送出失敗，請檢查網路或稍後再試。';
       }
 
       setTimeout(() => {
@@ -66,4 +90,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
