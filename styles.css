@@ -428,6 +428,38 @@ main section {
   line-height: 1.6;
 }
 
+.pillars {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.pillar-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: var(--shadow-card);
+  display: grid;
+  gap: 12px;
+}
+
+.pillar-card h3 {
+  margin: 0;
+  font-size: 22px;
+  color: var(--color-neutral-900);
+}
+
+.pillar-card p {
+  margin: 0;
+  color: var(--color-neutral-600);
+  line-height: 1.7;
+}
+
 .strategy {
   background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
 }
@@ -917,6 +949,10 @@ main section {
     gap: 40px;
   }
 
+  .pillars__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .strategy__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -991,6 +1027,14 @@ main section {
 
   .feature-showcase__info h3 {
     font-size: 22px;
+  }
+
+  .pillars__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-card {
+    padding: 24px;
   }
 
   .strategy__grid {
