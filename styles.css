@@ -257,7 +257,7 @@ a {
 .form-card {
   background: white;
   border-radius: var(--radius-lg);
-  padding: 30px;
+  padding: 36px;
   color: var(--color-neutral-900);
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -265,43 +265,32 @@ a {
 
 .form-card h2 {
   margin-top: 0;
-  font-size: 25px;
+  font-size: 26px;
 }
 
 .form-card p {
-  margin-bottom: 8px;
+  margin-bottom: 18px;
   color: var(--color-neutral-600);
 }
 
 .lead-form-embed {
   border-radius: var(--radius-md);
   border: 1px solid rgba(148, 163, 184, 0.25);
+  overflow: hidden;
   background: white;
   box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.08);
-  overflow: hidden;
-  position: relative;
-  min-height: 680px;
-  display: flex;
-  justify-content: center;
-  padding: 3px 0 10px;
 }
 
-.lead-form-embed__inner {
-  transform: scale(0.9);
-  transform-origin: top center;
-  width: calc(100% / 0.9);
-}
-
-.lead-form-embed__inner iframe {
+.lead-form-embed iframe {
   width: 100%;
-  height: 960px;
+  min-height: 600px;
   border: 0;
   display: block;
 }
 
 .lead-form {
   display: grid;
-  gap: 9px;
+  gap: 18px;
 }
 
 .lead-form label {
@@ -398,9 +387,9 @@ main section {
 
 .feature-showcase__item {
   display: flex;
-  align-items: stretch;
-  gap: 32px;
-  padding: 32px;
+  align-items: center;
+  gap: 48px;
+  padding: 40px;
   border-radius: var(--radius-lg);
   background: white;
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -412,7 +401,8 @@ main section {
 }
 
 .feature-showcase__media {
-  flex: 1.05 1 0;
+  flex: 1.1 1 45%;
+  max-width: 520px;
   border-radius: var(--radius-md);
   overflow: hidden;
   background: rgba(15, 23, 42, 0.08);
@@ -436,6 +426,7 @@ main section {
 
 .feature-showcase__info {
   flex: 1 1 0;
+  min-width: 0;
   display: grid;
   gap: 18px;
 }
@@ -1030,6 +1021,11 @@ main section {
     gap: 40px;
   }
 
+  .feature-showcase__media {
+    max-width: none;
+    flex: 1 1 100%;
+  }
+
   .pillars__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1149,10 +1145,6 @@ main section {
 
   .promotion__card {
     padding: 28px;
-  }
-
-  .lead-form-embed {
-    min-height: 640px;
   }
 
   .waitlist {
