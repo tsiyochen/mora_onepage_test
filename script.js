@@ -96,6 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
     autoPlayVideos.forEach((video) => {
       video.muted = true;
       video.setAttribute('muted', '');
+      video.loop = true;
+      video.setAttribute('loop', '');
     });
 
     if ('IntersectionObserver' in window) {
