@@ -89,4 +89,50 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  const autoPlayVideos = document.querySelectorAll('.js-autoplay-video');
+
+  if (autoPlayVideos.length) {
+    autoPlayVideos.forEach((video) => {
+      video.muted = true;
+      video.setAttribute('muted', '');
+    });
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const video = entry.target;
+            const shouldPlayOnce = video.dataset.autoplayOnce === 'true';
+
+            if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
+              const playPromise = video.play();
+              if (playPromise && typeof playPromise.then === 'function') {
+                playPromise.catch(() => {});
+              }
+
+              if (shouldPlayOnce) {
+                observer.unobserve(video);
+              }
+            } else if (!shouldPlayOnce) {
+              video.pause();
+            }
+          });
+        },
+        {
+          threshold: [0.2, 0.4, 0.6, 0.8],
+          rootMargin: '0px',
+        }
+      );
+
+      autoPlayVideos.forEach((video) => observer.observe(video));
+    } else {
+      autoPlayVideos.forEach((video) => {
+        const playPromise = video.play();
+        if (playPromise && typeof playPromise.then === 'function') {
+          playPromise.catch(() => {});
+        }
+      });
+    }
+  }
 });

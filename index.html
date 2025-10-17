@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="./favbicon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -24,9 +25,9 @@
           <span class="brand__tagline">人才資產化平台</span>
         </div>
         <nav class="header__nav" aria-label="主選單">
-          <a href="#features">核心價值</a>
-          <a href="#strategy">市場藍圖</a>
-          <a href="#lead-form">加入等候名單</a>
+          <a href="#pillars">核心價值</a>
+          <a href="#product">產品特色</a>
+          <a href="#solutions">解決方案</a>
         </nav>
         <a href="#lead-form" class="button button--ghost">加入等候名單</a>
       </div>
@@ -60,7 +61,7 @@
 
       </section>
 
-      <section class="pillars">
+      <section class="pillars" id="pillars">
         <div class="container section__header">
           <p class="eyebrow">六大特點</p>
           <h2>深耕市場17年 系統化方法 </br>加速人才資產與案源增長</h2>
@@ -98,8 +99,7 @@
 
       <section class="feature-overview" id="features">
         <div class="container section__header">
-          <p class="eyebrow">核心價值</p>
-          <h2>比人力平台更精準、更透明、更可信賴</h2>
+          <h2 id="product">從臉書社團到接案平台，讓我要接案/我要發案精準媒合</h2>
           <p class="section__lead">
             MORA 將產業的專案脈絡轉換成 AI 可讀的資料模型，透過自動化評估與雙邊工具，
             讓企業與人才專心在策略與創意，而非耗時的溝通與協調。
@@ -108,14 +108,18 @@
         <div class="container feature-showcase">
           <article class="feature-showcase__item">
             <div class="feature-showcase__media">
-              <iframe
-                src="https://www.youtube.com/embed/wJQghIk8_gs"
-                title="人才 AI 定價教練示範影片"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+              <video
+                controls
+                preload="metadata"
+                poster="./image/price.png"
+                playsinline
+                muted
+                class="js-autoplay-video"
+                data-autoplay-once="true"
+              >
+                <source src="./video/price.mp4" type="video/mp4" />
+                您的瀏覽器不支援影片播放，建議改用 Chrome 或 Safari。
+              </video>
             </div>
             <div class="feature-showcase__info">
               <h3>人才 AI 定價教練與服務模板</h3>
@@ -133,11 +137,14 @@
             <div class="feature-showcase__media">
               <video
                 controls
-                preload="none"
-                poster="https://picsum.photos/seed/mora-matching/960/540"
+                preload="metadata"
+                poster="./image/search.png"
                 playsinline
+                muted
+                class="js-autoplay-video"
+                data-autoplay-once="true"
               >
-                <source src="https://storage.googleapis.com/coverr-main/mp4/Waves.mp4" type="video/mp4" />
+                <source src="./video/filter.mp4" type="video/mp4" />
                 您的瀏覽器不支援影片播放，建議改用 Chrome 或 Safari。
               </video>
             </div>
@@ -157,11 +164,14 @@
             <div class="feature-showcase__media">
               <video
                 controls
-                preload="none"
-                poster="https://picsum.photos/seed/mora-dashboard/960/540"
+                preload="metadata"
+                poster="./image/project.png"
                 playsinline
+                muted
+                class="js-autoplay-video"
+                data-autoplay-once="true"
               >
-                <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4" />
+                <source src="./video/project.mp4" type="video/mp4" />
                 您的瀏覽器不支援影片播放，建議改用 Chrome 或 Safari。
               </video>
             </div>
@@ -180,7 +190,7 @@
         </div>
       </section>
 
-      <section class="persona">
+      <section class="persona" id="solutions">
         <div class="container persona__inner">
           <div class="persona__block">
             <p class="eyebrow">企業端體驗</p>
@@ -230,7 +240,6 @@
 
       <section class="strategy" id="strategy">
         <div class="container section__header">
-          <p class="eyebrow">市場藍圖</p>
           <h2>鎖定新世代人才與企業的成長需求</h2>
           <p class="section__lead">
             企業將職缺轉換為任務，人才透過專業創造價值</br> 一起迎接未來新型態工作
@@ -257,9 +266,19 @@
               <h3>請加入等候名單</h3>
               <p>留下資訊，成為我們的第一批使用者。</p>
               <div class="lead-form-embed" role="region" aria-label="MORA 等候名單表單">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSenTF0xsMg9JCcLqybm11tia7vbuYjGqVv49tuNcleDBLgg_g/viewform?embedded=true" width="1000" height="750" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
-            
-                </iframe>
+                <div class="lead-form-embed__inner">
+                  <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSenTF0xsMg9JCcLqybm11tia7vbuYjGqVv49tuNcleDBLgg_g/viewform?embedded=true"
+                    title="MORA 等候名單表單"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0"
+                    width="1200"
+                    height="1000"
+                  >
+                    載入中…
+                  </iframe>
+                </div>
               </div>
               <p class="form__hint">
                 <br>若表單無法顯示，請
